@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>藏逸拍賣會 | 書籍設計</title>
+  <link rel="stylesheet" href="forworks.css">
+</head>
+<body>
+  <!-- 保持原有HTML结构不变 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">Azuna</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+  
+  <button id="topButton">↑</button>
+
+  <article class="main-content">
+    <img src="img/Jewerly_Top.webp" alt="Japanese restaurant menu design showcase" class="hero-image">
+    
+    <section class="project-details">
+      <h1 class="project-title">藏逸拍賣會 | 書籍設計</h1>
+      <p class="project-year">年份：2022</p>
+      <p class="project-tools">工具：Photoshop,Indesign</p>
+    </section>
+
+    <div class="tag-container">
+      <span class="tag">書籍設計</span>
+      <span class="tag">視覺合成</span>
+    </div>
+
+    <section class="description-box">
+      <div class="section-content">
+        <h2 class="section-title">設計描述</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">
+        藏逸拍賣會 2022 秋季拍賣會 珠寶大型目錄，封面運用合成的方式展現黃鑽的閃耀加上燙金字體提升整體的質感。
+        內頁運用銀版使珠寶在視覺上更顯現出來，並且在珠寶上上水光，更使珠寶視覺上更明顯。
+            
+        </p>
+      </div>
+    </section>
+
+    <div class="gallery">
+        <div class="gallery-image">
+          <img src="img/Jewerly01.webp" alt="書籍設計 1" data-fullsize="img/Jewerly01.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/Jewerly02.webp" alt="書籍設計 2" data-fullsize="img/Jewerly02.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/Jewerly03.webp" alt="書籍設計 3" data-fullsize="img/Jewerly03.webp">
+        </div>
+        <div class="gallery-image">
+            <img src="img/Jewerly04.webp" alt="書籍設計 3" data-fullsize="img/Jewerly04.webp">
+          </div>
+      </div>
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+          <button class="close-btn" onclick="closeLightbox()">&times;</button>
+          <img class="lightbox-image" id="lightboxImage" src="" alt="燈箱預覽">
+        </div>
+      </div>
+
+    <section class="credits-box">
+      <div class="section-content">
+        <h2 class="section-title">製作名單</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">Designer : 梓枰</p>
+      </div>
+    </section>
+  </article>
+  <script src="forworks.js"></script>
+</body>
+</html>

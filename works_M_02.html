@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>可可熊早餐店 視覺識別再造</title>
+  <link rel="stylesheet" href="forworks.css">
+</head>
+<body>
+  <!-- 保持原有HTML结构不变 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">Azuna</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+
+  <article class="main-content">
+    <img src="img/Cocobear_Top .webp" alt="Japanese restaurant menu design showcase" class="hero-image">
+    
+    <section class="project-details">
+      <h1 class="project-title">可可熊早餐店 視覺識別再造</h1>
+      <p class="project-year">年份：2018</p>
+      <p class="project-tools">工具：Photoshop,Illustrator</p>
+    </section>
+
+    <div class="tag-container">
+      <span class="tag">菜單設計</span>
+      <span class="tag">插畫</span>
+      <span class="tag">LOGO</span>
+    </div>
+
+    <section class="description-box">
+      <div class="section-content">
+        <h2 class="section-title">設計描述</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">
+          整體風格展現出濃厚的日式氛圍。插畫部分呈現菜餚的細膩質感與豐富層次， 運用 Photoshop 進行電繪，著重描繪麵衣的效果將產品藉由電繪提升至另一層的美感。 輔以日式毛筆字體與傳統印章風格的標誌設計，使插畫更具文化識別性。    
+        </p>
+      </div>
+    </section>
+    <button id="topButton">↑</button>
+    <div class="gallery">
+        <div class="gallery-image">
+          <img src="img/Cocobear01.webp" alt="菜單設計 1" data-fullsize="img/Cocobear01.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/Cocobear02.webp" alt="菜單設計 2" data-fullsize="img/Cocobear02.webp">
+        </div>
+        <div class="gallery-image">
+            <img src="img/Cocobear03.webp" alt="菜單設計 3" data-fullsize="img/Cocobear03.webp">
+          </div>
+          </div>
+      </div>
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+          <button class="close-btn" onclick="closeLightbox()">&times;</button>
+          <img class="lightbox-image" id="lightboxImage" src="" alt="燈箱預覽">
+        </div>
+      </div>
+
+    <section class="credits-box">
+      <div class="section-content">
+        <h2 class="section-title">製作名單</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">Designer : 梓枰</p>
+      </div>
+    </section>
+  </article>
+
+  <script src="forworks.js"></script>
+</body>
+</html>

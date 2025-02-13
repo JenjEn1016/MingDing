@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>台北市立動物園票券重製</title>
+  <link rel="stylesheet" href="forworks.css">
+</head>
+<body>
+  <!-- 保持原有HTML结构不变 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">Azuna</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+
+  <article class="main-content">
+    <img src="img/Zoo_Top.webp" alt="Japanese restaurant menu design showcase" class="hero-image">
+    
+    <section class="project-details">
+      <h1 class="project-title">台北市立動物園票券重製</h1>
+      <p class="project-year">年份：2018</p>
+      <p class="project-tools">工具：Photoshop,Illustrator</p>
+    </section>
+
+    <div class="tag-container">
+      <span class="tag">平面設計</span>
+      <span class="tag">插畫</span>
+    </div>
+
+    <section class="description-box">
+      <div class="section-content">
+        <h2 class="section-title">設計描述</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">
+        將台北市立動物園票券，重新設計並賦予比較復古的方式，配上手繪的動物分別代表成人以及兒童票，以此做為區分。
+            
+        </p>
+      </div>
+    </section>
+    <button id="topButton">↑</button>
+    <div class="gallery">
+        <div class="gallery-image">
+          <img src="img/Zoo01.webp" alt="票券設計 1" data-fullsize="img/Zoo01.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/Zoo02.webp" alt="票券設計 2" data-fullsize="img/Zoo02.webp">
+        </div>
+       
+      </div>
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+          <button class="close-btn" onclick="closeLightbox()">&times;</button>
+          <img class="lightbox-image" id="lightboxImage" src="" alt="燈箱預覽">
+        </div>
+      </div>
+
+    <section class="credits-box">
+      <div class="section-content">
+        <h2 class="section-title">製作名單</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">Designer : 梓枰</p>
+      </div>
+    </section>
+  </article>
+  <script src="forworks.js"></script>
+</body>
+</html>

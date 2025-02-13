@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azuna Portfolio</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+<body>
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">Azuna</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+  <div class="floating-translate">
+    <button id="translate-toggle" class="translate-toggle">🌐</button>
+    <div id="translate-options" class="translate-options">
+      <button class="lang-btn" data-lang="zh-TW">中文</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">日本語</button>
+    </div>
+  </div>
+  <!-- <div class="language-switcher">
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh-TW">中文</button>
+    <button class="lang-btn" data-lang="ja">日本語</button>
+  </div> -->
+  
+  <button id="topButton">↑</button>
+  <main>
+    <h2 data-i18n="all_works" id="portfolio-title">全部作品</h2>
+    <div class="tags">
+      <button data-i18n="all" class="tag-button" onclick="filterPortfolio('all')">全部</button>
+      <button data-i18n="menu_design" class="tag-button" onclick="filterPortfolio('菜單設計')">菜單設計</button>
+      <button data-i18n="logo" class="tag-button" onclick="filterPortfolio('Logo')">Logo</button>
+      <button data-i18n="graphic_design" class="tag-button" onclick="filterPortfolio('平面設計')">平面設計</button>
+      <button data-i18n="illustration" class="tag-button" onclick="filterPortfolio('插畫')">插畫</button>
+      <button data-i18n="text_design" class="tag-button" onclick="filterPortfolio('文字設計')">文字設計</button>
+      <button data-i18n="book_design" class="tag-button" onclick="filterPortfolio('書籍設計')">書籍設計</button>
+      <button data-i18n="business_card_design" class="tag-button" onclick="filterPortfolio('名片設計')">名片設計</button>
+      <button data-i18n="ui_design" class="tag-button" onclick="filterPortfolio('UI 設計')">UI 設計</button>
+      <button data-i18n="visual_composition" class="tag-button" onclick="filterPortfolio('視覺合成')">視覺合成</button>
+    </div>
+
+    <div class="portfolio" id="portfolio">
+      <a class="portfolio-item" data-tags="UI 設計" href="works_U_03.html">
+        <img src="img/Works_Joyorder.webp" alt="Work UI">
+        <div data-i18n="joyorder5_ui" class="portfolio-item-info">JoyOrder5 桌邊點餐 | UI 設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="菜單設計,Logo,插畫" href="works_M_01.html">
+        <img src="img/Work_menu_01.webp" alt="Work graphic">
+        <div data-i18n="isheng_menu"  class="portfolio-item-info">伊勝日式料理 | 菜單設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="平面設計,UI 設計" href="works_U_01.html">
+        <img src="img/works_kiosk_01.webp" alt="Work UI">
+        <div data-i18n="kiosk_chikee_ui" class="portfolio-item-info">Kiosk 池記燒臘 | UI 設計</div>
+      </a>
+      <a  class="portfolio-item" data-tags="平面設計,UI 設計" href="works_U_02.html">
+        <img src="img/Works_Kiosk_02.webp" alt="Work UI">
+        <div data-i18n="kiosk_mountain_coffee_ui" class="portfolio-item-info">Kiosk 山上咖啡 | UI 設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="平面設計,插畫,文字設計'" href="works_I_02.html">
+        <img src="img/Works_Rabbit.webp" alt="Work illustrator">
+        <div data-i18n="rabbit_year_red_envelope" class="portfolio-item-info">2024 兔年紅包 | 平面設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="名片設計,Logo,插畫,文字設計" href="works_N_01.html">
+        <img src="img/Works_Namecard.webp" alt="Work namecard">
+        <div data-i18n="good_digital_business_card" data-i18n="kiosk_chikee_ui" class="portfolio-item-info">好好用數位 | 名片設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_05.html">
+        <img src="img/Works_Painting.webp" alt="Work book">
+        <div data-i18n="cangyi_auction_book_painting" data-i18n="kiosk_chikee_ui" class="portfolio-item-info">藏逸拍賣會-2023 書畫拍賣 | 書籍設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_06.html">
+        <img src="img/Works_Jewerly02.webp" alt="Work book">
+        <div data-i18n="cangyi_auction_jewelry_2023" class="portfolio-item-info">藏逸拍賣會-2023 珠寶拍賣 | 書籍設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_04.html">
+        <img src="img/Works_Wine.webp" alt="Work book">
+        <div data-i18n="cangyi_auction_wine_2023" data-i18n="kiosk_chikee_ui" class="portfolio-item-info">藏逸拍賣會-2023 酒品拍賣 | 書籍設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="平面設計,視覺合成" href="works_C_01.html">
+        <img src="img/Works_Card.webp" alt="Work card">
+        <div data-i18n="cangyi_auction_invitation" data-i18n="kiosk_chikee_ui" class="portfolio-item-info">藏逸拍賣會-拍賣邀請卡 | 平面設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="平面設計,視覺合成" href="works_BB_01.html">
+        <img src="img/works_board.webp" alt="Work graphic">
+        <div data-i18n="visual_extension" class="portfolio-item-info">視覺延伸物 | 平面設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_01.html">
+        <img src="img/Work_jewerly.webp" alt="Work book">
+        <div data-i18n="cangyi_auction_jewelry_2022" class="portfolio-item-info">藏逸拍賣會-2022 珠寶拍賣 | 書籍設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_03.html">
+        <img src="img/Works_diamond.webp" alt="Work book">
+        <div data-i18n="jurassic_diamond_brand_book_2021" class="portfolio-item-info">2021侏羅紀彩鑽品牌書 | 書籍設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="平面設計,插畫" href="works_I_01.html">
+        <img src="img/Works_Music.webp" alt="Work graphic">
+        <div data-i18n="world_music_festival" class="portfolio-item-info">世界音樂節 | 平面設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="菜單設計,Logo,插畫" href="works_M_02.html">
+        <img src="img/Works_cocobear.webp" alt="Work graphic">
+        <div data-i18n="cocokuma_breakfast_logo" class="portfolio-item-info">可可熊早餐店 視覺識別再造 | Logo</div>
+      </a>
+      <a class="portfolio-item" data-tags="平面設計" href="works_B_02.html">
+        <img src="img/Work_Book_P.webp" alt="Work book">
+        <div data-i18n="design_book_cover_redesign" class="portfolio-item-info">《設計》書封重新設計 | 平面設計</div>
+      </a>
+      <a class="portfolio-item" data-tags="平面設計,插畫" href="works_G_01.html">
+        <img src="img/Works_Zoo.webp" alt="Work graphic">
+        <div data-i18n="taipei_zoo_ticket_redesign" class="portfolio-item-info">台北市立動物園票券重製 | 平面設計</div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright © Azuna All Rights Reserved.</p>
+  </footer>
+
+  <script src="test.js">
+    
+  </script>
+</body>
+</html>

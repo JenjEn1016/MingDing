@@ -1,0 +1,385 @@
+@font-face {
+  font-family:'SweiGothicCJKtc-Regular';
+  src: url(https://cdn.jsdelivr.net/gh/max32002/swei-gothic@2.129/WebFont/CJK%20TC/SweiGothicCJKtc-Regular.woff2) format("woff2")
+  , url(https://cdn.jsdelivr.net/gh/max32002/swei-gothic@2.129/WebFont/CJK%20TC/SweiGothicCJKtc-Regular.woff) format("woff");
+}
+* {
+      cursor: none !important; /* 強制隱藏所有元素的鼠標 */
+    }
+    .mouse-ball {
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #4fa89f;
+      border-radius: 50%;
+      mix-blend-mode: normal; /* 反白效果 */
+      pointer-events: none; /* 防止遮擋點擊 */
+      transform: translate(-50%, -50%) scale(1);
+      transition: transform 0.2s ease-out, background 0.2s ease-out;
+      z-index: 9999;
+    }
+    a, button, .clickable {
+      position: relative;
+    }
+    .floating-translate {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    /* 主按鈕樣式 */
+    .translate-toggle {
+      background-color: #4fa89f;
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      color: #fff;
+      font-size: 24px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+    
+    .translate-toggle:hover {
+      background-color: #3d8b80;
+    }
+    
+    /* 語言選項容器 */
+    .translate-options {
+      margin-top: 10px;
+      display: none;
+      flex-direction: column;
+    }
+    
+    /* 當容器有 active class 時展開語言選項 */
+    .floating-translate.active .translate-options {
+      display: flex;
+    }
+    
+    /* 各語言按鈕樣式 */
+    .translate-options .lang-btn {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 8px 12px;
+      margin-top: 5px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    }
+    
+    .translate-options .lang-btn:hover {
+      background-color: #f0f0f0;
+    }
+    
+    /* 響應式調整 */
+    @media (max-width: 600px) {
+      .floating-translate {
+        bottom: 10px;
+        left: 10px;
+      }
+      .translate-toggle {
+        padding: 10px;
+        font-size: 20px;
+      }
+      .translate-options .lang-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+      }
+    }
+
+    /* .language-switcher {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    
+    .lang-btn {
+      padding: 8px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      background: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    
+    .lang-btn:hover {
+      background: #e0e0e0;
+    }
+    
+    .lang-btn.active {
+      background: #007bff;
+      color: white;
+      border-color: #0056b3;
+    } */
+    body {
+      margin: 0;
+      font-family: 'SweiGothicCJKtc-Regular', -apple-system, Roboto, Helvetica, sans-serif;
+      background-color: #F8F8F2;
+      color: #537162;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .brand-logo {
+        font-size: 40px;
+        font-weight: bold;
+      color: #537162;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 18px;
+      font-weight: 400;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+      margin: 20px 0;
+      flex-wrap: wrap;
+    }
+
+    .tag-button {
+      padding: 6px 20px;
+      border-style:solid ;
+      border-color: #239D8E;
+      border-width: 1.2px;
+      background-color: #F0F0E4;
+      color: #73AD9D;
+      border-radius: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .tag-button:hover {
+      background-color: #dae0dd;
+    }
+
+    .tag-button.active {
+      border-style: none;
+      background-color: #239D8E;
+      color: #F0F0E4;
+    }
+
+    .portfolio {
+      letter-spacing: 0.48px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      flex-direction: column;
+      text-align: left; 
+      overflow: visible;
+      transition: transform 0.3s;
+      text-decoration: none;
+    }
+
+    .portfolio-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .portfolio-item img {
+      width: 100%; 
+      border-radius: 14px;
+      box-shadow: -1px 1px 8px rgb(214, 211, 211);
+    }
+
+    .portfolio-item-info {
+      color: #317B72;
+      padding: 20px 10px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      font-size: 14px;
+      background-color: #F0F0E4;
+
+      @media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .brand-logo {
+    font-size: 32px;
+  }
+
+  nav {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  #portfolio-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .tags {
+    gap: 8px;
+    margin: 15px 0;
+  }
+
+  .tag-button {
+    padding: 4px 16px;
+    font-size: 14px;
+    border-radius: 16px;
+  }
+
+  .portfolio {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .portfolio-item-info {
+    padding: 12px 8px;
+    font-size: 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px 20px;
+    text-align: center;
+  }
+
+  footer address {
+    order: 2;
+  }
+
+  footer p {
+    order: 1;
+  }
+}
+
+/* 中型裝置微調 (769px ~ 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .portfolio {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .hamburger div {
+      width: 30px;
+      height: 3px;
+      background-color: #537162;
+      margin: 4px 0;
+    }
+    .mobile-nav {
+      display: none;
+      position: absolute;
+      top: 70px;
+      right: 40px;
+      background: #F0F0E4;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      gap: 15px;
+      padding: 10px;
+    }
+    .mobile-nav a {
+      text-decoration: none;
+      color: inherit;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 10px;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .mobile-nav.active {
+        display: flex;
+        z-index: 1;
+        border-radius: 12px;
+      }
+    }
+
+    #topButton {
+      position: fixed;
+      bottom: 80px;
+      right: 80px;
+      width: 60px;
+      height: 60px;
+      background-color: #488f7d;
+      color: white;
+      font-size: 26px;
+      font-weight: 800;
+      border: none;
+      border-radius: 50%;
+      line-height: 0px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: opacity 0.3s, transform 0.3s;
+      opacity: 0;
+      transform: scale(0);
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* 按鈕顯示時的動畫 */
+    #topButton.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    /* 響應式調整 */
+    @media (max-width: 768px) {
+      #topButton {
+          width: 40px;
+          height: 40px;
+          font-size: 14px;
+          bottom: 15px;
+          right: 15px;
+          background-color: #488f7d;
+      }
+    }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界音樂節 Flyer 重製 | 平面設計</title>
+  <link rel="stylesheet" href="forworks.css">
+</head>
+<body>
+  <!-- 保持原有HTML结构不变 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">Azuna</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+  <button id="topButton">↑</button>
+  <article class="main-content">
+    <img src="img/Music_Top.webp" alt="Japanese restaurant menu design showcase" class="hero-image">
+    
+    <section class="project-details">
+      <h1 class="project-title">世界音樂節 Flyer 重製 | 平面設計</h1>
+      <p class="project-year">年份：2020</p>
+      <p class="project-tools">工具：Illustrator、Photoshop</p>
+    </section>
+
+    <div class="tag-container">
+      <span class="tag">平面設計</span>
+      <span class="tag">插畫</span>
+    </div>
+
+    <section class="description-box">
+      <div class="section-content">
+        <h2 class="section-title">設計描述</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">
+        2016年世界音樂節主視覺 Flyer 重製，採用插畫的設定。
+        </p>
+      </div>
+    </section>
+
+    <div class="gallery">
+        <div class="gallery-image">
+          <img src="img/Music02.webp" alt="Flyer Design1" data-fullsize="img/Music02.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/Music01.webp" alt="Flyer Design2" data-fullsize="img/Music01.webp">
+        </div>
+       
+      </div>
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+          <button class="close-btn" onclick="closeLightbox()">&times;</button>
+          <img class="lightbox-image" id="lightboxImage" src="" alt="燈箱預覽">
+        </div>
+      </div>
+
+    <section class="credits-box">
+      <div class="section-content">
+        <h2 class="section-title">製作名單</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">Designer : 梓枰</p>
+      </div>
+    </section>
+  </article>
+
+  <script src="forworks.js"></script>
+</body>
+</html>

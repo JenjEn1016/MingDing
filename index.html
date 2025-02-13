@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MingDing</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- 帷幕遮罩：初始顯示 LOGO -->
+  <div class="curtain" id="curtain">
+    <div class="logo">
+      <span>M</span>
+      <span>I</span>
+      <span>N</span>
+      <span>G</span>
+      <span>D</span>
+      <span>I</span>
+      <span>N</span>
+      <span>G</span>
+    </div>
+  </div>
+  
+  <!-- 網頁主要內容，初始隱藏 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">MingDing</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="carousel">
+      <div class="carousel-track">
+        <!-- 原始图片 + 镜像复制 -->
+        <a href="works_M_01.html"><img src="img/Menu_index.webp" alt="Portfolio 1"></a>
+        <a href="works_B_02.html"><img src="img/Book_P_index.webp" alt="Portfolio 2"></a>
+        <a href="works_B_01.html"><img src="img/index_Jewerly.webp" alt="Portfolio 3"></a>
+        <a href="works_I_02.html"><img src="img/Rabbit_Index.webp" alt="Portfolio 4"></a>
+        <!-- 镜像复制 -->
+        <a href="works_M_01.html"><img src="img/Menu_index.webp" alt="Portfolio 1"></a>
+        <a href="works_B_02.html"><img src="img/Book_P_index.webp" alt="Portfolio 2"></a>
+        <a href="works_B_01.html"><img src="img/index_Jewerly.webp" alt="Portfolio 3"></a>
+        <a href="works_I_02.html"><img src="img/Rabbit_Index.webp" alt="Portfolio 4"></a>
+      </div>
+    </section>
+    
+    <section class="skills">
+      <div class="skills-track first">
+        <span>Illustrator</span>
+        <span>Photoshop</span>
+        <span>Landing page</span>
+        <span>brochure</span>
+        <span>LogoL</span>
+        <span>Graphic</span>
+        <span>Premiere</span>
+        <span>InDesign</span>
+      </div>
+      <div class="skills-track second">
+        <span>Illustrator</span>
+        <span>Photoshop</span>
+        <span>Landing page</span>
+        <span>brochure</span>
+        <span>LogoL</span>
+        <span>Graphic</span>
+        <span>Premiere</span>
+        <span>InDesign</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Copyright © MingDing All Rights Reserved.</p>
+  </footer>
+  
+  <script src="index.js">
+  </script>
+</body>
+</html>
