@@ -83,7 +83,7 @@
         position: absolute;
         width: 15px;
         height: 15px;
-        background:#2a7d99;
+        background:#82bccf;
         border-radius: 50%;
         mix-blend-mode: normal; /* 反白效果 */
         pointer-events: none; /* 防止遮擋點擊 */

@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
   clickableElements.forEach(element => {
     element.addEventListener('mouseenter', () => {
       ball.style.transform = 'translate(-50%, -50%) scale(4)';
-      ball.style.background = '#006284';
+      ball.style.background = '#82bccf';
       ball.style.mixBlendMode= 'multiply'; /* 反白效果 */
     });
 

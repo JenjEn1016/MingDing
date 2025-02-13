@@ -12,7 +12,7 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  background: #2a7d99;
+  background: #82bccf;
   border-radius: 50%;
   mix-blend-mode: normal;
   pointer-events: none;
@@ -122,7 +122,7 @@ a.hero-image img {
 
 .description-box,
 .credits-box {
-  background: #fdfdf2;
+  background: #f2f8fd;
   border: 1px solid #4d6c86;
   border-radius: 12px;
   padding: 30px;

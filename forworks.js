@@ -17,7 +17,7 @@ document.addEventListener('mouseenter', () => ball.style.opacity = '1');
 clickables.forEach(el => {
   el.addEventListener('mouseenter', () => {
     ball.style.transform = 'translate(-50%, -50%) scale(4)';
-    ball.style.backgroundColor = '#4fa89f';
+    ball.style.backgroundColor = '#82bccf';
     ball.style.mixBlendMode= 'multiply';
   });
   el.addEventListener('mouseleave', () => {
