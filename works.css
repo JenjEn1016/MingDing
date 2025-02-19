@@ -387,6 +387,6 @@
     }
     @media (max-width: 480px) {
       .mouse-ball {
-        display: none !important; /* 小屏幕隱藏環形文字 */
+        display: none !important; 
       }
   }
