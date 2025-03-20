@@ -1,65 +1,17 @@
 
 
-// 監聽各語言按鈕的點擊事件 (根據你的翻譯切換邏輯來處理)
-document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const selectedLang = this.dataset.lang;
-    // 此處請根據你的多語言切換邏輯進行語言更新，例如：
-    // switchLanguage(selectedLang);
-    console.log("切換語言到：" + selectedLang);
-  });
-});
 
 
 // 初始化語言
 let currentLang = localStorage.getItem('language') || 'zh-TW';
 
-// 切換語言函數
-function switchLanguage(lang) {
-  currentLang = lang;
-  localStorage.setItem('language', lang);
-  applyTranslations();
-  updateButtonStyles();
-}
-
-// 應用翻譯
-function applyTranslations() {
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    const key = element.dataset.i18n;
-    element.textContent = translations[currentLang][key];
-  });
-}
-
-// 更新按鈕樣式
-function updateButtonStyles() {
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === currentLang);
-  });
-}
 
 // 初始化事件監聽
 document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
 });
 
-// 頁面載入時執行
-document.addEventListener('DOMContentLoaded', () => {
-  applyTranslations();
-  updateButtonStyles();
-});
-const categoryMapping = {
-  'all': 'all_works',
-  '菜單設計': 'menu_design',
-  'Logo': 'logo',
-  '平面設計': 'graphic_design',
-  '插畫': 'illustration',
-  '文字設計': 'text_design',
-  '書籍設計': 'book_design',
-  '名片設計': 'business_card_design',
-  'UI 設計': 'ui_design',
-  '視覺合成': 'visual_composition'
-  // 新增分類時，在此處添加新的映射對應
-};
+
 function filterPortfolio(tag) {
   const items = document.querySelectorAll('.portfolio-item');
   items.forEach(item => {
@@ -80,24 +32,24 @@ function filterPortfolio(tag) {
   buttons.forEach(button => button.classList.remove('active'));
   event.target.classList.add('active');
 }
-// function filterPortfolio(tag) {
-//   const items = document.querySelectorAll('.portfolio-item');
-//   items.forEach(item => {
-//     const itemTags = item.getAttribute('data-tags');
-//     if (tag === 'all' || itemTags.includes(tag)) {
-//       item.style.display = 'block';
-//     } else {
-//       item.style.display = 'none';
-//     }
-//   });
+function filterPortfolio(tag) {
+  const items = document.querySelectorAll('.portfolio-item');
+  items.forEach(item => {
+    const itemTags = item.getAttribute('data-tags');
+    if (tag === 'all' || itemTags.includes(tag)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
 
-//   const title = document.getElementById('portfolio-title');
-//   title.textContent = tag === 'all' ? translations[currentLang]['all_works'] : tag;
+  const title = document.getElementById('portfolio-title');
+  title.textContent = tag === 'all' ? translations[currentLang]['all_works'] : tag;
 
-//   const buttons = document.querySelectorAll('.tag-button');
-//   buttons.forEach(button => button.classList.remove('active'));
-//   event.target.classList.add('active');
-// }
+  const buttons = document.querySelectorAll('.tag-button');
+  buttons.forEach(button => button.classList.remove('active'));
+  event.target.classList.add('active');
+}
 
 
 
