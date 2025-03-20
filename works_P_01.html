@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>牛店</title>
+  <link rel="stylesheet" href="forworks.css">
+</head>
+<body>
+  <!-- 保持原有HTML结构不变 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">MingDing</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+
+  <article class="main-content">
+    <img src="img/beef_Top.webp" alt="Japanese restaurant menu design showcase" class="hero-image">
+    
+    <section class="project-details">
+      <h1 class="project-title">牛店</h1>
+      <p class="project-year">年份：2024</p>
+      <p class="project-tools">工具：Photoshop,Illustrator</p>
+    </section>
+
+    <div class="tag-container">
+      <span class="tag">平面設計</span>
+      <span class="tag">包裝設計</span>
+    </div>
+
+    <section class="description-box">
+      <div class="section-content">
+        <h2 class="section-title">設計描述</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">
+          牛肉麵常溫料理包的設計旨在展現精緻而高級的風格，突顯其必比登推薦的地位。將獲獎資訊放置在顯眼位置，以彰顯產品的卓越及榮譽。此外，為了讓照片中的牛肉塊更加引人注目，後製調整了光影效果，使其更加突出和誘。另外也為此料理包設計了外帶提袋，採用簡約風格，主要在凸顯牛店LOGO，以提升品牌識別度。
+            
+        </p>
+      </div>
+    </section>
+    <button id="topButton">↑</button>
+    <div class="gallery">
+        <div class="gallery-image">
+          <img src="img/beef_01.webp" alt="包裝設計 1" data-fullsize="img/beef_01.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/beef_02.webp" alt="包裝設計 2" data-fullsize="img/beef_02.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/beef_03.webp" alt="包裝設計 3" data-fullsize="img/beef_03.webp">
+        </div>
+       
+      </div>
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+          <button class="close-btn" onclick="closeLightbox()">&times;</button>
+          <img class="lightbox-image" id="lightboxImage" src="" alt="燈箱預覽">
+        </div>
+      </div>
+
+    <section class="credits-box">
+      <div class="section-content">
+        <h2 class="section-title">製作名單</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">Designer : 蓁蓁</p>
+      </div>
+    </section>
+  </article>
+  <script src="forworks.js"></script>
+</body>
+</html>

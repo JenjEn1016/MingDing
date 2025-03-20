@@ -1,7 +1,4 @@
-// 點擊主按鈕切換展開/收起語言選項
-document.getElementById('translate-toggle').addEventListener('click', function() {
-  document.querySelector('.floating-translate').classList.toggle('active');
-});
+
 
 // 監聽各語言按鈕的點擊事件 (根據你的翻譯切換邏輯來處理)
 document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -12,102 +9,7 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
     console.log("切換語言到：" + selectedLang);
   });
 });
-// 多語言內容字典
-const translations = {
-  'zh-TW': {
-    'all_works': '全部作品',
-    'all': '全部',
-    'menu_design': '菜單設計',
-    'logo': 'Logo',
-    'graphic_design': '平面設計',
-    'illustration': '插畫',
-    'text_design': '文字設計',
-    'book_design': '書籍設計',
-    'business_card_design': '名片設計',
-    'ui_design': 'UI 設計',
-    'visual_composition': '視覺合成',
-    'joyorder5_ui': 'JoyOrder5 桌邊點餐 | UI 設計',
-    'isheng_menu': '伊勝日式料理 | 菜單設計',
-    'kiosk_chikee_ui': 'Kiosk 池記燒臘 | UI 設計',
-    'kiosk_mountain_coffee_ui': 'Kiosk 山上咖啡 | UI 設計',
-    'rabbit_year_red_envelope': "2024 兔年紅包 | 平面設計",
-    'good_digital_business_card': "好好用數位 | 名片設計",
-    'cangyi_auction_book_painting': "藏逸拍賣會-2023 書畫拍賣 | 書籍設計",
-    'cangyi_auction_jewelry_2023': "藏逸拍賣會-2023 珠寶拍賣 | 書籍設計",
-    'cangyi_auction_wine_2023': "藏逸拍賣會-2023 酒品拍賣 | 書籍設計",
-    'cangyi_auction_invitation': "藏逸拍賣會-拍賣邀請卡 | 平面設計",
-    'visual_extension': "視覺延伸物 | 平面設計",
-    'cangyi_auction_jewelry_2022': "藏逸拍賣會-2022 珠寶拍賣 | 書籍設計",
-    'jurassic_diamond_brand_book_2021': "2021侏羅紀彩鑽品牌書 | 書籍設計",
-    'world_music_festival': "世界音樂節 | 平面設計",
-    'cocokuma_breakfast_logo': "可可熊早餐店 視覺識別再造 | Logo",
-    'design_book_cover_redesign': "《設計》書封重新設計 | 平面設計",
-    'taipei_zoo_ticket_redesign': "台北市立動物園票券重製 | 平面設計",
-    'kiosk_fireMaster': "Kiosk 火少爺炒飯  | UI 設計"
-  },
-  'en': {
-  'all_works': 'All Works',
-  'all': 'All',
-  'menu_design': 'Menu Design',
-  'logo': 'Logo',
-  'graphic_design': 'Graphic Design',
-  'illustration': 'Illustration',
-  'text_design': 'Text Design',
-  'book_design': 'Book Design',
-  'business_card_design': 'Business Card Design',
-  'ui_design': 'UI Design',
-  'visual_composition': 'Visual Composition',
-  'joyorder5_ui': 'JoyOrder5 Table Ordering | UI Design',
-  'isheng_menu': 'Isheng Japanese Cuisine | Menu Design',
-  'kiosk_chikee_ui': 'Kiosk Chikee Roast | UI Design',
-  'kiosk_mountain_coffee_ui': 'Kiosk Mountain Coffee | UI Design',
-   'rabbit_year_red_envelope': "2024 Rabbit Year Red Envelope | Graphic Design",
-  'good_digital_business_card': "Good Digital Use | Business Card Design",
-  'cangyi_auction_book_painting': "Cangyi Auction - 2023 Painting & Calligraphy Auction | Book Design",
-  'cangyi_auction_jewelry_2023': "Cangyi Auction - 2023 Jewelry Auction | Book Design",
-  'cangyi_auction_wine_2023': "Cangyi Auction - 2023 Wine Auction | Book Design",
-  'cangyi_auction_invitation': "Cangyi Auction - Auction Invitation Card | Graphic Design",
-  'visual_extension': "Visual Extension | Graphic Design",
-  'cangyi_auction_jewelry_2022': "Cangyi Auction - 2022 Jewelry Auction | Book Design",
-  'jurassic_diamond_brand_book_2021': "2021 Jurassic Colored Diamond Brand Book | Book Design",
-  'world_music_festival': "World Music Festival | Graphic Design",
-  'cocokuma_breakfast_logo': "Coco Bear Breakfast | Visual Identity Redesign | Logo",
-  'design_book_cover_redesign': "Redesign of 'Design' Book Cover | Graphic Design",
-  'taipei_zoo_ticket_redesign': "Taipei Zoo Ticket Redesign | Graphic Design",
-    'kiosk_fireMaster': "Kiosk Fire Master Fried Rice  | UI Design"
-},
-'ja': {
-  'all_works': 'すべての作品',
-  'all': 'すべて',
-  'menu_design': 'メニュー設計',
-  'logo': 'ロゴ',
-  'graphic_design': 'グラフィックデザイン',
-  'illustration': 'イラストレーション',
-  'text_design': 'テキストデザイン',
-  'book_design': '書籍デザイン',
-  'business_card_design': '名刺デザイン',
-  'ui_design': 'UI デザイン',
-  'visual_composition': 'ビジュアル合成',
-  'joyorder5_ui': 'JoyOrder5 テーブルオーダー | UI デザイン',
-  'isheng_menu': '伊勝日本料理 | メニュー設計',
-  'kiosk_chikee_ui': 'Kiosk 池記焼き物 | UI デザイン',
-  'kiosk_mountain_coffee_ui': 'Kiosk 山のコーヒー | UI デザイン',
-  'rabbit_year_red_envelope': "2024 兎年紅包｜グラフィックデザイン",
-  'good_digital_business_card': "好好用數位｜名刺デザイン",
-  'cangyi_auction_book_painting': "藏逸拍賣會-2023 書画拍売｜書籍デザイン",
-  'cangyi_auction_jewelry_2023': "藏逸拍賣會-2023 宝石拍売｜書籍デザイン",
-  'cangyi_auction_wine_2023': "藏逸拍賣會-2023 酒品拍売｜書籍デザイン",
-  'cangyi_auction_invitation': "藏逸拍賣會-拍賣招待状｜グラフィックデザイン",
-  'visual_extension': "ビジュアルエクステンション｜グラフィックデザイン",
-  'cangyi_auction_jewelry_2022': "藏逸拍賣會-2022 宝石拍売｜書籍デザイン",
-  'jurassic_diamond_brand_book_2021': "2021 ジュラシックカラーダイヤモンドブランドブック｜書籍デザイン",
-  'world_music_festival': "世界音楽祭｜グラフィックデザイン",
-  'cocokuma_breakfast_logo': "可可熊朝食店｜ビジュアルアイデンティティ再構築｜ロゴ",
-  'design_book_cover_redesign': "『設計』ブックカバー再デザイン｜グラフィックデザイン",
-  'taipei_zoo_ticket_redesign': "台北市立動物園チケット再製｜グラフィックデザイン",
-    'kiosk_fireMaster': "Kiosk 火少爺チャーハン  | UI デザイン"
-}
-};
+
 
 // 初始化語言
 let currentLang = localStorage.getItem('language') || 'zh-TW';
