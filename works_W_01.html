@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TECH & WATCH 機械錶智慧收藏盒｜募資網站設計</title>
+  <link rel="stylesheet" href="forworks.css">
+</head>
+<body>
+  <!-- 保持原有HTML结构不变 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">MingDing</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+  <button id="topButton">↑</button>
+  <article class="main-content">
+    <img src="img/Watch_Top.webp" alt="Japanese restaurant menu design showcase" class="hero-image">
+    
+    <section class="project-details">
+      <h1 class="project-title">TECH & WATCH 機械錶智慧收藏盒</h1>
+      <p class="project-year">年份：2021</p>
+      <p class="project-tools">工具：Photoshop,Illustrator</p>
+    </section>
+
+    <div class="tag-container">
+      <span class="tag">平面設計</span> 
+      <span class="tag">網頁設計</span> 
+    </div>
+
+    <section class="description-box">
+      <div class="section-content">
+        <h2 class="section-title">設計描述</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">
+          整體設計採用黑色與金色為主要色調，旨在展現機械錶收藏盒的奢華質感。整體風格典雅，凸顯高級手工藝的魅力。 共製作網頁版與手機版兩種版本，以確保良好的使用體驗。另新增兩個分頁：一是介紹專業製作團隊，讓用戶了解背後的匠心與專業；二是展示匠裱體驗的詳細流程方案，讓每位用戶都能深入體驗這一奢侈品的獨特價值。
+            
+        </p>
+      </div>
+    </section>
+
+    <div class="gallery">
+        <div class="gallery-image">
+          <img src="img/Watch_01.webp" alt="Web 1" data-fullsize="img/Watch_01.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/Watch_02.webp" alt="Web 2" data-fullsize="img/Watch_02.webp">
+        </div>
+       
+      </div>
+
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+          <button class="close-btn" onclick="closeLightbox()">&times;</button>
+          <img class="lightbox-image" id="lightboxImage" src="" alt="燈箱預覽">
+        </div>
+      </div>
+
+    <section class="credits-box">
+      <div class="section-content">
+        <h2 class="section-title">製作名單</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">Designer : 蓁蓁</p>
+      </div>
+    </section>
+  </article>
+  <script src="forworks.js"></script>
+</body>
+</html>
