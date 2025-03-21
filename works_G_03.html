@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025 蛇年紅包｜平面設計</title>
+  <link rel="stylesheet" href="forworks.css">
+</head>
+<body>
+  <!-- 保持原有HTML结构不变 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">MingDing</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+
+  <article class="main-content">
+    <img src="img/snake_Top.webp" alt="Japanese restaurant menu design showcase" class="hero-image">
+    
+    <section class="project-details">
+      <h1 class="project-title">2025 蛇年紅包｜平面設計</h1>
+      <p class="project-year">年份：2025</p>
+      <p class="project-tools">工具：Photoshop,Illustrator</p>
+    </section>
+
+    <div class="tag-container">
+      <span class="tag">平面設計</span>
+    </div>
+
+    <section class="description-box">
+      <div class="section-content">
+        <h2 class="section-title">設計描述</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">
+          2025蛇年紅包袋設計，共兩款。
+            
+        </p>
+      </div>
+    </section>
+    <button id="topButton">↑</button>
+    <div class="gallery">
+        <div class="gallery-image">
+          <img src="img/snake_01.webp" alt="海報設計 1" data-fullsize="img/snake_01.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/snake_02.webp" alt="海報設計 2" data-fullsize="img/snake_02.webp">
+        </div>
+       
+      </div>
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+          <button class="close-btn" onclick="closeLightbox()">&times;</button>
+          <img class="lightbox-image" id="lightboxImage" src="" alt="燈箱預覽">
+        </div>
+      </div>
+
+    <section class="credits-box">
+      <div class="section-content">
+        <h2 class="section-title">製作名單</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">Designer : 蓁蓁</p>
+      </div>
+    </section>
+  </article>
+  <script src="forworks.js"></script>
+</body>
+</html>
