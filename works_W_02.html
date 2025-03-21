@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>娘家明適保｜銷售頁/一頁式 設計</title>
+  <link rel="stylesheet" href="forworks.css">
+</head>
+<body>
+  <!-- 保持原有HTML结构不变 -->
+  <div class="mouse-ball"></div>
+  <header>
+    <div class="brand-logo">MingDing</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="mobile-nav" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="works.html">Works</a>
+    </div>
+  </header>
+  <button id="topButton">↑</button>
+  <article class="main-content">
+    <img src="img/eye_Top.webp" alt="Japanese restaurant menu design showcase" class="hero-image">
+    
+    <section class="project-details">
+      <h1 class="project-title">娘家明適保</h1>
+      <p class="project-year">年份：2022</p>
+      <p class="project-tools">工具：Photoshop,Illustrator</p>
+    </section>
+
+    <div class="tag-container">
+      <span class="tag">平面設計</span> 
+      <span class="tag">網頁設計</span> 
+    </div>
+
+    <section class="description-box">
+      <div class="section-content">
+        <h2 class="section-title">設計描述</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">
+          娘家明適保銷售頁設計   承接公司:好好用數位有限公司
+ 
+        </p>
+      </div>
+    </section>
+
+    <div class="gallery">
+        <div class="gallery-image">
+          <img src="img/eye_01.webp" alt="Web 1" data-fullsize="img/eye_01.webp">
+        </div>
+        <div class="gallery-image">
+          <img src="img/eye_02.webp" alt="Web 2" data-fullsize="img/eye_02.webp">
+        </div>
+       
+      </div>
+
+      <div class="lightbox-overlay" id="lightboxOverlay">
+        <div class="lightbox-content">
+          <button class="close-btn" onclick="closeLightbox()">&times;</button>
+          <img class="lightbox-image" id="lightboxImage" src="" alt="燈箱預覽">
+        </div>
+      </div>
+
+    <section class="credits-box">
+      <div class="section-content">
+        <h2 class="section-title">製作名單</h2>
+        <div class="section-divider"></div>
+        <p class="section-text">Designer : 蓁蓁</p>
+      </div>
+    </section>
+  </article>
+  <script src="forworks.js"></script>
+</body>
+</html>
