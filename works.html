@@ -26,17 +26,14 @@
       <a href="works.html">Works</a>
     </div>
   </header>
-  <!-- <div class="language-switcher">
-    <button class="lang-btn" data-lang="en">EN</button>
-    <button class="lang-btn" data-lang="zh-TW">中文</button>
-    <button class="lang-btn" data-lang="ja">日本語</button>
-  </div> -->
   
   <button id="topButton">↑</button>
   <main>
     <h2 data-i18n="all_works" id="portfolio-title">全部作品</h2>
     <div class="tags">
-      <button data-i18n="all" class="tag-button" onclick="filterPortfolio('all')">全部</button>
+      <button data-i18n="all" class="tag-button" onclick="sortPortfolio('asc', this)">年份:升序</button>
+      <button data-i18n="all" class="tag-button" onclick="sortPortfolio('desc', this)">年份:降序</button>
+      <button data-i18n="all" class="tag-button" onclick="filterPortfolio('all', this)">全部</button>
       <button data-i18n="menu_design" class="tag-button" onclick="filterPortfolio('菜單設計')">菜單設計</button>
       <button data-i18n="logo" class="tag-button" onclick="filterPortfolio('Logo')">Logo</button>
       <button data-i18n="graphic_design" class="tag-button" onclick="filterPortfolio('平面設計')">平面設計</button>
@@ -51,99 +48,99 @@
     </div>
 
     <div class="portfolio" id="portfolio">
-      <a class="portfolio-item" data-tags="平面設計" href="works_G_04.html">
+      <a class="portfolio-item" data-tags="平面設計" data-year="2024" href="works_G_04.html">
         <img src="img/Works_bowling.webp" alt="Work Graphic">
         <div data-i18n="bowling_poster" class="portfolio-item-info">保齡球慶生活動主視覺｜平面設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計" href="works_G_03.html">
+      <a class="portfolio-item" data-tags="平面設計" data-year="2025" href="works_G_03.html">
         <img src="img/Works_snake.webp" alt="Work Graphic">
         <div data-i18n="snake_envlope" class="portfolio-item-info">2025 蛇年紅包｜平面設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,網頁設計" href="works_W_02.html">
+      <a class="portfolio-item" data-tags="平面設計,網頁設計" data-year="2023" href="works_W_02.html">
         <img src="img/Works_eye.webp" alt="Work landingPage">
         <div data-i18n="eye_web" class="portfolio-item-info">娘家明適保｜銷售頁/一頁式 設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,網頁設計" href="works_W_01.html">
+      <a class="portfolio-item" data-tags="平面設計,網頁設計" data-year="2021" href="works_W_01.html">
         <img src="img/Works_Watch.webp" alt="Work website">
         <div data-i18n="watch_web" class="portfolio-item-info">TECH & WATCH 機械錶智慧收藏盒｜募資網站設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,包裝設計" href="works_P_01.html">
+      <a class="portfolio-item" data-tags="平面設計,包裝設計" data-year="2024" href="works_P_01.html">
         <img src="img/Works_beef.webp" alt="Work Package">
         <div data-i18n="Beef_mise" class="portfolio-item-info">牛店｜包裝設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計" href="works_G_02.html">
+      <a class="portfolio-item" data-tags="平面設計" data-year="2024" href="works_G_02.html">
         <img src="img/Works_Hakka.webp" alt="Work graphic">
         <div data-i18n="Hakka" class="portfolio-item-info">花蓮客家博覽會｜活動主視覺設計</div>
       </a>
-      <a class="portfolio-item" data-tags="UI 設計" href="works_U_03.html">
+      <a class="portfolio-item" data-tags="UI 設計" data-year="2024" href="works_U_03.html">
         <img src="img/Works_Joyorder.webp" alt="Work UI">
         <div data-i18n="joyorder5_ui" class="portfolio-item-info">JoyOrder5 桌邊點餐 | UI 設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,UI 設計" href="works_U_04.html">
+      <a class="portfolio-item" data-tags="平面設計,UI 設計" data-year="2024" href="works_U_04.html">
         <img src="img/works_fire.webp" alt="Work UI">
         <div data-i18n="kiosk_fireMaster" class="portfolio-item-info">Kiosk 火少爺炒飯  | UI 設計</div>
       </a>
-      <a class="portfolio-item" data-tags="菜單設計,Logo,插畫" href="works_M_01.html">
+      <a class="portfolio-item" data-tags="菜單設計,Logo,插畫" data-year="2024" href="works_M_01.html">
         <img src="img/Work_menu_01.webp" alt="Work graphic">
         <div data-i18n="isheng_menu"  class="portfolio-item-info">伊勝日式料理 | 菜單設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,UI 設計" href="works_U_01.html">
+      <a class="portfolio-item" data-tags="平面設計,UI 設計" data-year="2024" href="works_U_01.html">
         <img src="img/works_kiosk_01.webp" alt="Work UI">
         <div data-i18n="kiosk_chikee_ui" class="portfolio-item-info">Kiosk 池記燒臘 | UI 設計</div>
       </a>
-      <a  class="portfolio-item" data-tags="平面設計,UI 設計" href="works_U_02.html">
+      <a  class="portfolio-item" data-tags="平面設計,UI 設計" data-year="2024" href="works_U_02.html">
         <img src="img/Works_Kiosk_02.webp" alt="Work UI">
         <div data-i18n="kiosk_mountain_coffee_ui" class="portfolio-item-info">Kiosk 山上咖啡 | UI 設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,插畫,文字設計'" href="works_I_02.html">
+      <a class="portfolio-item" data-tags="平面設計,插畫,文字設計'" data-year="2024" href="works_I_02.html">
         <img src="img/Works_Rabbit.webp" alt="Work illustrator">
         <div data-i18n="rabbit_year_red_envelope" class="portfolio-item-info">2024 兔年紅包 | 平面設計</div>
       </a>
-      <a class="portfolio-item" data-tags="名片設計,Logo,插畫,文字設計" href="works_N_01.html">
+      <a class="portfolio-item" data-tags="名片設計,Logo,插畫,文字設計" data-year="2024" href="works_N_01.html">
         <img src="img/Works_Namecard.webp" alt="Work namecard">
         <div data-i18n="good_digital_business_card" data-i18n="kiosk_chikee_ui" class="portfolio-item-info">好好用數位 | 名片設計</div>
       </a>
-      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_05.html">
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" data-year="2023" href="works_B_05.html">
         <img src="img/Works_Painting.webp" alt="Work book">
         <div data-i18n="cangyi_auction_book_painting" data-i18n="kiosk_chikee_ui" class="portfolio-item-info">藏逸拍賣會-2023 書畫拍賣 | 書籍設計</div>
       </a>
-      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_06.html">
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" data-year="2023" href="works_B_06.html">
         <img src="img/Works_Jewerly02.webp" alt="Work book">
         <div data-i18n="cangyi_auction_jewelry_2023" class="portfolio-item-info">藏逸拍賣會-2023 珠寶拍賣 | 書籍設計</div>
       </a>
-      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_04.html">
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" data-year="2023" href="works_B_04.html">
         <img src="img/Works_Wine.webp" alt="Work book">
         <div data-i18n="cangyi_auction_wine_2023" data-i18n="kiosk_chikee_ui" class="portfolio-item-info">藏逸拍賣會-2023 酒品拍賣 | 書籍設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,視覺合成" href="works_C_01.html">
+      <a class="portfolio-item" data-tags="平面設計,視覺合成" data-year="2023" href="works_C_01.html">
         <img src="img/Works_Card.webp" alt="Work card">
         <div data-i18n="cangyi_auction_invitation" data-i18n="kiosk_chikee_ui" class="portfolio-item-info">藏逸拍賣會-拍賣邀請卡 | 平面設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,視覺合成" href="works_BB_01.html">
+      <a class="portfolio-item" data-tags="平面設計,視覺合成" data-year="2023" href="works_BB_01.html">
         <img src="img/works_board.webp" alt="Work graphic">
         <div data-i18n="visual_extension" class="portfolio-item-info">視覺延伸物 | 平面設計</div>
       </a>
-      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_01.html">
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" data-year="2022" href="works_B_01.html">
         <img src="img/Work_jewerly.webp" alt="Work book">
         <div data-i18n="cangyi_auction_jewelry_2022" class="portfolio-item-info">藏逸拍賣會-2022 珠寶拍賣 | 書籍設計</div>
       </a>
-      <a class="portfolio-item" data-tags="書籍設計,視覺合成" href="works_B_03.html">
+      <a class="portfolio-item" data-tags="書籍設計,視覺合成" data-year="2021" href="works_B_03.html">
         <img src="img/Works_diamond.webp" alt="Work book">
         <div data-i18n="jurassic_diamond_brand_book_2021" class="portfolio-item-info">2021侏羅紀彩鑽品牌書 | 書籍設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,插畫" href="works_I_01.html">
+      <a class="portfolio-item" data-tags="平面設計,插畫" data-year="2019" href="works_I_01.html">
         <img src="img/Works_Music.webp" alt="Work graphic">
         <div data-i18n="world_music_festival" class="portfolio-item-info">世界音樂節 | 平面設計</div>
       </a>
-      <a class="portfolio-item" data-tags="菜單設計,Logo,插畫" href="works_M_02.html">
+      <a class="portfolio-item" data-tags="菜單設計,Logo,插畫" data-year="2019" href="works_M_02.html">
         <img src="img/Works_cocobear.webp" alt="Work graphic">
         <div data-i18n="cocokuma_breakfast_logo" class="portfolio-item-info">可可熊早餐店 視覺識別再造 | Logo</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計" href="works_B_02.html">
+      <a class="portfolio-item" data-tags="平面設計" data-year="2019" href="works_B_02.html">
         <img src="img/Work_Book_P.webp" alt="Work book">
         <div data-i18n="design_book_cover_redesign" class="portfolio-item-info">《設計》書封重新設計 | 平面設計</div>
       </a>
-      <a class="portfolio-item" data-tags="平面設計,插畫" href="works_G_01.html">
+      <a class="portfolio-item" data-tags="平面設計,插畫" data-year="2018" href="works_G_01.html">
         <img src="img/Works_Zoo.webp" alt="Work graphic">
         <div data-i18n="taipei_zoo_ticket_redesign" class="portfolio-item-info">台北市立動物園票券重製 | 平面設計</div>
       </a>

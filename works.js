@@ -1,6 +1,27 @@
+function sortPortfolio(order, btn) {
+  // 更新按鈕的 .active
+  const tagButtons = document.querySelectorAll('.tag-button');
+  tagButtons.forEach(button => button.classList.remove('active'));
+  btn.classList.add('active');
 
+  // 更新提示文字（假設提示文字為作品標題，可根據需求調整）
+  const title = document.getElementById('portfolio-title');
+  title.textContent = order === 'asc' ? '年份:升序' : '年份:降序';
 
+  const container = document.getElementById('portfolio');
+  const items = Array.from(container.getElementsByClassName('portfolio-item'));
 
+  // 根據 data-year 進行排序
+  items.sort((a, b) => {
+    const yearA = parseInt(a.getAttribute('data-year'), 10);
+    const yearB = parseInt(b.getAttribute('data-year'), 10);
+    return order === 'asc' ? yearA - yearB : yearB - yearA;
+  });
+
+  // 重新插入排序後的項目
+  container.innerHTML = '';
+  items.forEach(item => container.appendChild(item));
+}
 
 // 初始化語言
 let currentLang = localStorage.getItem('language') || 'zh-TW';
@@ -12,25 +33,29 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
 });
 
 
-function filterPortfolio(tag) {
-  const items = document.querySelectorAll('.portfolio-item');
-  items.forEach(item => {
-    const itemTags = item.getAttribute('data-tags');
-    if (tag === 'all' || itemTags.includes(tag)) {
+function filterPortfolio(tag, btn) {
+  // 移除所有按鈕的 active，再設定目前點擊的按鈕
+  const tagButtons = document.querySelectorAll('.tag-button');
+  tagButtons.forEach(button => button.classList.remove('active'));
+  btn.classList.add('active');
+
+  // 更新上方提示文字
+  const title = document.getElementById('portfolio-title');
+  title.textContent = tag === 'all' ? '全部作品' : tag;
+
+  // 根據選取的 tag 顯示或隱藏作品項目
+  const container = document.getElementById('portfolio');
+  const items = container.getElementsByClassName('portfolio-item');
+
+  for (let item of items) {
+    // 取得該作品的所有 tag，移除前後空格再比對
+    const tags = item.getAttribute('data-tags').split(',').map(t => t.trim());
+    if (tag === 'all' || tags.includes(tag)) {
       item.style.display = 'block';
     } else {
       item.style.display = 'none';
     }
-  });
-
-  const title = document.getElementById('portfolio-title');
-  // 從映射表中取得對應的翻譯鍵，如果沒有找到則使用原始 tag
-  const translationKey = categoryMapping[tag] || tag;
-  title.textContent = translations[currentLang][translationKey] || tag;
-
-  const buttons = document.querySelectorAll('.tag-button');
-  buttons.forEach(button => button.classList.remove('active'));
-  event.target.classList.add('active');
+  }
 }
 function filterPortfolio(tag) {
   const items = document.querySelectorAll('.portfolio-item');
