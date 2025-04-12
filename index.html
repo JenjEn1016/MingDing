@@ -49,9 +49,32 @@
 <link rel="icon" type="image/png" sizes="24x24" href="/icon/icon-24x24.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/icon/icon-32x32.png">
 <link rel="manifest" href="/manifest.json">
-
+<div id="rwd-check" style="
+position: fixed;
+bottom: 0; left: 0;
+background: rgba(0,0,0,0.6);
+color: #fff;
+font-size: 12px;
+padding: 4px 8px;
+z-index: 10001;
+">
+Viewport Width: <span id="viewport-width">--</span>px
+</div>
+<script>
+function updateViewport() {
+  document.getElementById('viewport-width').textContent = window.innerWidth;
+}
+window.addEventListener('resize', updateViewport);
+updateViewport();
+</script>
 </head>
 <body>
+
+  <!-- 放在 <body> 底部，或任意你想要的位置 -->
+<a href="https://lin.ee/ldB61Bv" id="line-btn" target="_blank" aria-label="Contact via LINE">
+  <img src="img/LINE_Brand_icon.png" alt="LINE">
+</a>
+
   <!-- 帷幕遮罩：初始顯示 LOGO -->
   <div class="curtain" id="curtain">
     <div class="logo">
@@ -88,6 +111,7 @@
   </header>
 
   <main>
+
     <section class="carousel">
       <div class="carousel-track">
         <!-- 原始图片 + 镜像复制 -->
@@ -148,7 +172,7 @@
   <footer>
     <p>Copyright © MingDing All Rights Reserved.</p>
   </footer>
-  
+ 
   <script src="index.js">
   </script>
 </body>

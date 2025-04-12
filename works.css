@@ -390,3 +390,54 @@
         display: none !important; 
       }
   }
+
+  :root {
+    --line-btn-size: 8%;   /* 桌機預設寬度：8% */
+  }
+  
+  /* 按鈕基礎樣式 */
+  #line-btn {
+    position: fixed;
+    bottom: 20px;         /* 距離底部 */
+    right: 20px;          /* 距離右側 */
+    width: var(--line-btn-size);
+    z-index: 9999;
+  }
+  #line-btn img {
+    width: 80%;
+    height: auto;
+    display: block;
+  }
+  
+  /* ————————————————————————————
+     Tablet (≤768px)：覆寫大小
+     ———————————————————————————— */
+  @media (max-width: 768px) {
+    :root {
+      --line-btn-size: 50%;  /* 平板版寬度：10% */
+    }
+    #line-btn {
+      position: fixed;
+      top: 100px;         /* 距離底部 */
+      left: 20px;          /* 距離右側 */
+      width: var(--line-btn-size);
+      z-index: 9999;
+    }
+  }
+  
+  /* ————————————————————————————
+     Mobile (≤480px)：再次覆寫大小
+     ———————————————————————————— */
+  @media (max-width: 480px) {
+    :root {
+      --line-btn-size: 26%;  /* 手機版寬度：12% */
+    }
+    #line-btn {
+      position: fixed;
+      top: 85%;         /* 距離底部 */
+      left: 72%;          /* 距離右側 */
+      width: var(--line-btn-size);
+      z-index: 9999;
+    }
+  }
+ 
